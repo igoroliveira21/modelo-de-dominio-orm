@@ -24,6 +24,9 @@ public class Atividade {
     @ManyToMany(mappedBy = "atividades")
     private Set<Participante> participantes = new HashSet<>();
 
+    @ManyToMany(mappedBy = "atividades")
+    private Set<Bloco> blocos = new HashSet<>();
+
     public Atividade(){}
 
     public Atividade(Long id, String nome, String descricao, Double price, Categoria categoria) {
@@ -72,5 +75,9 @@ public class Atividade {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public Set<Participante> getParticipantes() {
+        return participantes;
     }
 }

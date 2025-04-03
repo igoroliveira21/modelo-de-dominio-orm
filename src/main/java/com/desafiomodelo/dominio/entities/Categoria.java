@@ -45,7 +45,4 @@ public class Categoria {
         return atividades;
     }
 
-    public void setAtividades(List<Atividade> atividades) {
-        this.atividades = atividades;
-    }
 }
